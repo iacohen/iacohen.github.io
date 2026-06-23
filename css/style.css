@@ -1,0 +1,177 @@
+/* ── Reset & base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #fafaf8;
+  --text:      #1a1a1a;
+  --muted:     #6b6b6b;
+  --accent:    #2a6496;
+  --border:    #e0e0dc;
+  --max-width: 680px;
+  --font:      'Georgia', serif;
+  --mono:      'Courier New', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* ── Nav ── */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-name {
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ── Main layout ── */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 5rem 0 2rem;
+}
+
+section + section {
+  border-top: 1px solid var(--border);
+}
+
+/* ── About ── */
+#about h1 {
+  font-size: 2.2rem;
+  font-weight: normal;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+
+.tagline {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.8rem;
+}
+
+#about p + p {
+  margin-top: 1rem;
+}
+
+/* ── Section headings ── */
+h2 {
+  font-size: 1.05rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+}
+
+/* ── Projects ── */
+.project {
+  margin-bottom: 2.8rem;
+}
+
+.project h3 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 0.2rem;
+}
+
+.project-meta {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.6rem;
+}
+
+/* ── Contact ── */
+#contact p {
+  margin-bottom: 1.2rem;
+}
+
+.contact-list {
+  list-style: none;
+  font-family: sans-serif;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* ── Footer ── */
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 540px) {
+  #about h1 { font-size: 1.7rem; }
+  nav ul { gap: 1.2rem; }
+}
