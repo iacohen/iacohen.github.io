@@ -19,26 +19,39 @@
     </nav>
   </header>
 
+  <section id="hero">
+    <div class="hero-content">
+      <div class="profile-photo-wrapper">
+        <img src="images/profile.jpg" alt="Ilana Cohen" class="profile-photo" />
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-hi">Hi!</h1>
+        <p class="hero-name">I'm Ilana.</p>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">↓</div>
+  </section>
+
   <main>
 
     <section id="about">
-      <h1>Ilana Cohen</h1>
-      <p class="tagline">Mechanical Engineering, Stanford University &mdash; Thermo/Fluids Track</p>
-      <p>
+      <h2 class="fade-in">About</h2>
+      <p class="tagline fade-in" style="--delay: 0.1s">Mechanical Engineering, Stanford University &mdash; Thermo/Fluids Track</p>
+      <p class="fade-in" style="--delay: 0.2s">
         I'm an undergraduate researcher working at the intersection of fluid mechanics,
         pneumatic haptics, and human-robot interaction. My work focuses on designing
         soft actuator systems that communicate meaningful tactile information to users.
       </p>
-      <p>
+      <p class="fade-in" style="--delay: 0.3s">
         Outside the lab I enjoy hiking, cooking, and thinking about how physical
         sensation shapes the way we understand the world.
       </p>
     </section>
 
     <section id="research">
-      <h2>Research &amp; Projects</h2>
+      <h2 class="fade-in">Research &amp; Projects</h2>
 
-      <article class="project">
+      <article class="project fade-in" style="--delay: 0.1s">
         <h3>Pneumatic Haptic Display</h3>
         <p class="project-meta">Stanford Human-Robot Interaction Lab &middot; 2025&ndash;present</p>
         <p>
@@ -49,7 +62,7 @@
         </p>
       </article>
 
-      <article class="project">
+      <article class="project fade-in" style="--delay: 0.2s">
         <h3>Fluid Mechanics of Soft Actuators</h3>
         <p class="project-meta">ME Research &middot; 2024</p>
         <p>
@@ -59,7 +72,7 @@
         </p>
       </article>
 
-      <article class="project">
+      <article class="project fade-in" style="--delay: 0.3s">
         <h3>Human-Robot Interaction Study</h3>
         <p class="project-meta">Class Project &middot; 2024</p>
         <p>
@@ -72,10 +85,11 @@
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>I'm always happy to talk about research, collaborations, or interesting problems.</p>
-      <ul class="contact-list">
+      <h2 class="fade-in">Contact</h2>
+      <p class="fade-in" style="--delay: 0.1s">I'm always happy to talk about research, collaborations, or interesting problems.</p>
+      <ul class="contact-list fade-in" style="--delay: 0.2s">
         <li>Email: <a href="mailto:iacohen@stanford.edu">iacohen@stanford.edu</a> | <a href="mailto:ilanacohen625@gmail.com">ilanacohen625@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/ilanacohen625" target="_blank" rel="noopener">github.com/ilanacohen625</a></li>
       </ul>
     </section>
 
@@ -84,6 +98,19 @@
   <footer>
     <p>&copy; 2026 Ilana Cohen</p>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
