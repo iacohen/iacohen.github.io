@@ -50,6 +50,7 @@ nav {
 }
 
 .nav-name {
+  font-family: var(--font);
   font-size: 0.95rem;
   letter-spacing: 0.03em;
   color: var(--muted);
