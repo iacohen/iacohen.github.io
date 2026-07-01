@@ -13,6 +13,11 @@ const cards = [
     desc: 'Pneumatic haptic displays, fluid mechanics of soft actuators, and HRI user studies.',
   },
   {
+    to: '/experience',
+    title: 'Experience',
+    desc: 'Research internships, residential life, tutoring, and leadership in theater and opera.',
+  },
+  {
     to: '/hobbies',
     title: 'Hobbies',
     desc: 'Hiking, cooking, and the ideas that live outside the lab.',
