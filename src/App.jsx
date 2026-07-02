@@ -3,7 +3,6 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
-import About from './pages/About'
 import Projects from './pages/Projects'
 import Experience from './pages/Experience'
 import Hobbies from './pages/Hobbies'
@@ -16,7 +15,6 @@ export default function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/hobbies" element={<Hobbies />} />

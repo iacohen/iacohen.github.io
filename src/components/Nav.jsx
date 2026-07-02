@@ -6,7 +6,6 @@ export default function Nav() {
       <nav>
         <Link to="/" className="nav-name">Ilana Cohen</Link>
         <ul>
-          <li><Link to="/about">About</Link></li>
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/experience">Experience</Link></li>
           <li><Link to="/hobbies">Hobbies</Link></li>

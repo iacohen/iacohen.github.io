@@ -3,10 +3,37 @@ import Carousel from '../components/Carousel'
 
 const projects = [
   {
-    title: '"Ilan" Planter',
-    meta: 'ME 103 — Stanford Product Realization Lab · 2025',
+    title: 'PieZense: Pneumatic Haptics System',
+    meta: 'CHARM Lab @ Stanford · 2025–2026',
     description:
-      'Designed and fabricated a custom planter named Ilan (Hebrew for "tree") as a final project for ME 103. Constructed from sheet steel with lathe-turned brass feet, integrating TIG welding, bead blasting, and selective powder coating using heat-resistant tape masking. The final piece now houses a thriving bromeliad, balancing structured geometry with personal meaning.',
+      'Redesigned and fabricated the CHARM Lab\'s primary pneumatic haptics system, focusing on modularity, compactness, and ease of use across applications. Led the mechanical design process, iterating CAD models to integrate custom PCBs with piezoelectric valves into a cohesive architecture. Collaborated with electrical and software teammates to build a system adaptable for future research and startup deployment, using Bambu and Formlabs rapid prototyping. The new PieZense system is now the foundation of the startup Haptica.',
+    images: [
+      '/images/PROJECT_piezense_1.png',
+      '/images/PROJECT_piezense_2.png',
+      '/images/PROJECT_piezense_3.png',
+      '/images/PROJECT_piezense_4.png',
+      '/images/PROJECT_piezense_5.jpg',
+    ],
+    tags: ['Haptics', 'CAD', 'Rapid Prototyping', 'PCB Integration'],
+  },
+    {
+    title: 'Vial-to-Vial Transfer Device',
+    meta: 'Gilead Sciences & Stanford ME · 2025–2026',
+    description:
+      'Worked with Gilead Sciences to design and develop a user-centered vial-to-vial drug transfer device with a focus on ergonomic usability, manufacturability, and reliable fluid transfer. Iterated through CAD and 3D printing—exploring multiple geometries, sealing approaches, and materials—to optimize accuracy, alignment, and robustness in operation and handling.',
+    images: [
+      '/images/PROJECT_vial_Main.png',
+      '/images/PROJECT_vial_1.png',
+      '/images/PROJECT_vial_4.png',
+      '/images/PROJECT_vial_3.png',
+    ],
+    tags: ['CAD', '3D Printing', 'User Testing', 'Medical Device Design'],
+  },
+  {
+    title: 'אילן',
+    meta: '2025',
+    description:
+      'Designed and fabricated a custom planter titled אילן ("Ilan," Hebrew for "tree"). Constructed from sheet steel with lathe-turned brass feet, integrating TIG welding, bead blasting, and selective powder coating using heat-resistant tape masking. The final piece now houses a thriving bromeliad, balancing structured geometry with personal and familial meaning.',
     images: [
       '/images/PROJECT_planter_Main.png',
       '/images/PROJECT_planter_1.png',
@@ -18,7 +45,7 @@ const projects = [
   },
   {
     title: 'Turning Mechanical Timepiece',
-    meta: 'ME 102 — Stanford · 2024',
+    meta: '2024',
     description:
       'Designed and built a mechanical timepiece in which a new card flips into view every hour, marking time through motion and imagery rather than a traditional clock face. Driven by an escapement mechanism and gear train, with components fabricated through 3D printing, laser cutting, and woodworking. The interchangeable display can shift from standard numerals to custom visual sequences.',
     images: [
@@ -27,33 +54,6 @@ const projects = [
       '/images/PROJECT_timepiece_2.png',
     ],
     tags: ['Mechanical Design', 'Laser Cutting', 'Woodworking', '3D Printing'],
-  },
-  {
-    title: 'Vial-to-Vial Transfer Device',
-    meta: 'Senior Capstone — Stanford ME · 2025–2026',
-    description:
-      'Designed and developed a user-centered vial-to-vial drug transfer device with a focus on ergonomic usability, manufacturability, and reliable fluid transfer. Iterated through CAD and 3D printing—exploring multiple geometries, sealing approaches, and materials—to optimize accuracy, alignment, and robustness in operation and handling.',
-    images: [
-      '/images/PROJECT_vial_Main.png',
-      '/images/PROJECT_vial_1.png',
-      '/images/PROJECT_vial_3.png',
-      '/images/PROJECT_vial_4.png',
-    ],
-    tags: ['CAD', '3D Printing', 'User Testing', 'Medical Device Design'],
-  },
-  {
-    title: 'PieZense: Pneumatic Haptics System',
-    meta: 'CHARM Lab at Stanford · 2025–2026',
-    description:
-      'Redesigned and fabricated the CHARM Lab\'s primary pneumatic haptics system, focusing on modularity, compactness, and ease of use across applications. Led the mechanical design process, iterating CAD models to integrate custom PCBs with piezoelectric valves into a cohesive architecture. Collaborated with electrical and software teammates to build a system adaptable for future research and startup deployment, using Bambu and Formlabs rapid prototyping.',
-    images: [
-      '/images/PROJECT_piezense_1.png',
-      '/images/PROJECT_piezense_2.png',
-      '/images/PROJECT_piezense_3.png',
-      '/images/PROJECT_piezense_4.png',
-      '/images/PROJECT_piezense_5.jpg',
-    ],
-    tags: ['Haptics', 'CAD', 'Rapid Prototyping', 'PCB Integration'],
   },
 ]
 

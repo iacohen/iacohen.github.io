@@ -6,7 +6,7 @@ export default function Contact() {
       <section id="contact">
         <FadeIn as="h2">Contact</FadeIn>
         <FadeIn as="p" delay={0.1}>
-          I'm always happy to talk about research, collaborations, or interesting problems.
+          Reach out anytime! I'd love to talk about projects, interesting problems, research, penguins, or things just for fun.
         </FadeIn>
         <FadeIn as="ul" className="contact-list" delay={0.2}>
           <li>
@@ -16,9 +16,9 @@ export default function Contact() {
             <a href="mailto:ilanacohen625@gmail.com">ilanacohen625@gmail.com</a>
           </li>
           <li>
-            GitHub:{' '}
-            <a href="https://github.com/ilanacohen625" target="_blank" rel="noopener">
-              github.com/ilanacohen625
+            LinkedIn:{' '}
+            <a href="https://www.linkedin.com/in/ilana-aguiar-cohen" target="_blank" rel="noopener">
+              linkedin.com/in/ilana-aguiar-cohen
             </a>
           </li>
         </FadeIn>

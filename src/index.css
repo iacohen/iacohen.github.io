@@ -296,6 +296,11 @@ h2::after {
   margin-top: 1rem;
 }
 
+.carousel-about {
+  margin-top: 2rem;
+  max-width: 640px;
+}
+
 /* ── Projects ── */
 .project {
   padding: 1.5rem;
@@ -369,6 +374,30 @@ h2::after {
   object-fit: contain;
   display: block;
   animation: carousel-fade 0.3s ease;
+  cursor: zoom-in;
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 1.4rem 0.9rem 0.6rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  text-align: left;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.carousel:hover .carousel-caption,
+.carousel:focus-within .carousel-caption {
+  transform: translateY(0);
 }
 
 .carousel-btn {
@@ -407,7 +436,7 @@ h2::after {
   display: flex;
   justify-content: center;
   gap: 0.4rem;
-  z-index: 2;
+  z-index: 3;
 }
 
 .carousel-dot {
@@ -433,6 +462,222 @@ h2::after {
 
 .carousel-art .carousel-img {
   object-fit: contain;
+}
+
+/* ── World map ── */
+.world-map-wrap {
+  position: relative;
+  width: min(1400px, 92vw);
+  margin-top: 1rem;
+  margin-left: calc((100% - min(1400px, 92vw)) / 2);
+  margin-right: calc((100% - min(1400px, 92vw)) / 2);
+  aspect-ratio: 2 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.world-map-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.world-map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0.15rem;
+  margin: -0.15rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.world-map-pin:hover,
+.world-map-pin:focus-visible {
+  z-index: 3;
+}
+
+.world-map-pin.home {
+  z-index: 2;
+}
+
+.world-map-dot {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px rgba(124, 107, 201, 0.3);
+  transition: transform 0.15s ease;
+}
+
+.world-map-pin:hover .world-map-dot,
+.world-map-pin:focus-visible .world-map-dot {
+  transform: scale(1.5);
+}
+
+.world-map-home-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--accent);
+  transition: transform 0.15s ease;
+}
+
+.world-map-pin:hover .world-map-home-icon,
+.world-map-pin:focus-visible .world-map-home-icon {
+  transform: scale(1.25);
+}
+
+.world-map-credit {
+  font-family: sans-serif;
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-align: right;
+  margin-top: 0.4rem;
+}
+
+.world-map-credit a {
+  color: var(--muted);
+}
+
+.world-map-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -6px);
+  background: #2c2a30;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 0.72rem;
+  white-space: nowrap;
+  padding: 0.3rem 0.55rem;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 2;
+}
+
+.world-map-pin:hover .world-map-tooltip,
+.world-map-pin:focus-visible .world-map-tooltip {
+  opacity: 1;
+  transform: translate(-50%, -10px);
+}
+
+/* ── Lightbox ── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(60, 58, 64, 0.7);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.32s ease;
+}
+
+.lightbox-overlay.visible {
+  opacity: 1;
+}
+
+.lightbox-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 92vw;
+  max-height: 88vh;
+  overflow: auto;
+  transform: scale(0.94);
+  transition: transform 0.32s ease;
+}
+
+.lightbox-overlay.visible .lightbox-content {
+  transform: scale(1);
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  cursor: zoom-in;
+  border-radius: 6px;
+  animation: carousel-fade 0.3s ease;
+}
+
+.lightbox-img.zoomed {
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  cursor: zoom-out;
+}
+
+.lightbox-caption {
+  color: #f0f0f0;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 60ch;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-prev { left: 1.5rem; }
+.lightbox-next { right: 1.5rem; }
+
+@media (max-width: 640px) {
+  .lightbox-nav {
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.6rem;
+  }
+  .lightbox-prev { left: 0.6rem; }
+  .lightbox-next { right: 0.6rem; }
+  .lightbox-close { top: 0.8rem; right: 1rem; font-size: 1.8rem; }
 }
 
 /* ── Project cards (new layout) ── */

@@ -1,4 +1,5 @@
 import FadeIn from '../components/FadeIn'
+import WorldMap from '../components/WorldMap'
 
 const hobbies = [
   {
@@ -34,6 +35,16 @@ export default function Hobbies() {
             </article>
           </FadeIn>
         ))}
+
+        <FadeIn as="h2" delay={0.15 * (hobbies.length + 1)} style={{ marginTop: '3rem' }}>
+          Places I've Been
+        </FadeIn>
+        <FadeIn as="p" delay={0.15 * (hobbies.length + 1) + 0.05}>
+          Hover a pin to see where.
+        </FadeIn>
+        <FadeIn delay={0.15 * (hobbies.length + 1) + 0.1}>
+          <WorldMap />
+        </FadeIn>
       </section>
     </main>
   )

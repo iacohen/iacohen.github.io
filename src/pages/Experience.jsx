@@ -5,18 +5,41 @@ const education = [
     org: 'Stanford University',
     location: 'Stanford, CA',
     dates: '2022–present',
-    degree: 'B.S. Mechanical Engineering (expected 2026) · M.S. Mechanical Engineering (expected 2027)',
+    degree: 'B.S. Mechanical Engineering (2026) · M.S. Mechanical Engineering (expected 2027)',
     notes: ['Tau Beta Pi — Engineering Honor Society Member'],
   },
   {
     org: 'University Laboratory High School',
     location: 'Urbana, IL',
     dates: '2018–2022',
-    notes: ['Matt Wilhelm "Service With A Smile" Award'],
+    notes: ['Matt Wilhelm "Service With A Smile" Award', 'Emma Koenker Foreign Language Award', 'Poésie en Liberté, Palmarès des établissements de l’étranger, Deuxième Prix, 2021'],
   },
 ]
 
 const work = [
+  {
+    org: 'Stanford Product Realization Laboratory',
+    role: 'Course Assistant',
+    location: 'Stanford, CA',
+    dates: 'Sep 2026-present',
+    bullets: [
+      'Part-time CA position at the Stanford machine shop teaching facility.',
+      'Course Assistant in the PRL, managing the shop for maintenence, operating hours, and safety, and serving students in a mentorship and instructive role.',
+    ],
+  },
+  {
+    org: 'Gilead Sciences / Stanford ME Senior Capstone',
+    role: 'Device Engineer & Finance and Materials Manager',
+    location: 'Stanford, CA',
+    dates: 'Sep 2025-Mar 2026',
+    bullets: [
+      'Designing, prototyping, and testing a mechanical vial-to-vial drug transfer device to enable safe, accurate 1 mL sterile dosing.',
+      'Modeling internal fluid pathways and actuation forces to achieve target flow rates and ergonomic operation.',
+      'Conducting validation testing and iterating on materials and CAD prototypes using experimental data.',
+      'Collaborating directly with Gilead engineers to refine safety, usability, and manufacturability constraints.',
+    ],
+  },
+
   {
     org: 'CHARM Lab at Stanford University',
     role: 'Research Intern',
@@ -76,6 +99,15 @@ const work = [
       'Applied control theory and system modeling using MATLAB and Simulink to autonomous systems problems.',
     ],
   },
+  {
+    org: 'Urbana Fine Arts Center / Champaign Urbana Ballet',
+    role: 'Instructor & Company Member',
+    location: 'Champaign-Urbana, IL',
+    dates: '2017-2022',
+    bullets: [
+      'Part-time dance instructor for students aged 5-18 in ballet and tap.',
+    ],
+  },
 ]
 
 const leadership = [
@@ -88,6 +120,11 @@ const leadership = [
     org: 'Ram\'s Head Theatrical Society & Stanford TAPS',
     role: 'Stage Manager',
     dates: 'Aug 2023–Dec 2023',
+  },
+  {
+    org: 'Champaign Urbana Ballet Student Production',
+    role: 'Producer & Film Editor',
+    dates: 'Summer 2022',
   },
 ]
 
