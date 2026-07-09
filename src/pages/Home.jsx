@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn'
 import Carousel from '../components/Carousel'
+import { IconGear, IconBriefcase, IconCompass, IconMail } from '../components/icons'
 
 // Add your own photos to public/images (e.g. ABOUT_1.jpg) and list them here.
 const aboutImages = [
@@ -27,21 +28,25 @@ const cards = [
     to: '/projects',
     title: 'Projects',
     desc: 'See what I\'ve been making, for class and for fun.',
+    icon: IconGear,
   },
   {
     to: '/experience',
     title: 'Experience',
     desc: 'From research internships and residential life to tutoring and dance.',
+    icon: IconBriefcase,
   },
   {
     to: '/hobbies',
     title: 'Hobbies',
     desc: 'Random things, when there\'s the time for freetime.',
+    icon: IconCompass,
   },
   {
     to: '/contact',
     title: 'Contact',
     desc: 'Get in touch! Reach out anytime; I\'d love to chat.',
+    icon: IconMail,
   },
 ]
 
@@ -108,6 +113,7 @@ export default function Home() {
         {cards.map((card, i) => (
           <FadeIn key={card.to} delay={0.1 * i}>
             <Link to={card.to} className="section-card">
+              <card.icon className="section-card-icon" aria-hidden="true" />
               <span className="section-card-title">{card.title}</span>
               <p className="section-card-desc">{card.desc}</p>
               <span className="section-card-arrow">→</span>
