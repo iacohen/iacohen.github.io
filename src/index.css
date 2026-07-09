@@ -10,7 +10,9 @@
   --text:         #1a1a1a;
   --heading:      #1a1a1a;
   --muted:        #565656;
-  --accent:       #7c6bc9;
+  /* --accent: deep purple for links, arrows, underlines, and other interactive/emphasis text */
+  --accent:       #5b4bc4;
+  /* --accent-light / --accent-mid: pale lavender washes, reserved for backgrounds and the photo ring */
   --accent-light: #ede9f7;
   --accent-mid:   #c4b8e8;
   --border:       #e0e0dc;
@@ -202,7 +204,7 @@ nav a:hover {
 
 .section-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(124, 107, 201, 0.13);
+  box-shadow: 0 12px 32px rgba(91, 75, 196, 0.13);
   border-color: var(--accent-mid);
 }
 
@@ -312,7 +314,7 @@ h2::after {
 
 .project:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(124, 107, 201, 0.13);
+  box-shadow: 0 10px 28px rgba(91, 75, 196, 0.13);
   border-color: var(--accent-mid);
 }
 
@@ -512,7 +514,7 @@ h2::after {
   border-radius: 50%;
   background: var(--accent);
   border: 2px solid var(--bg);
-  box-shadow: 0 0 0 2px rgba(124, 107, 201, 0.3);
+  box-shadow: 0 0 0 2px rgba(91, 75, 196, 0.3);
   transition: transform 0.15s ease;
 }
 
@@ -754,7 +756,7 @@ h2::after {
 }
 
 .proj-card:hover {
-  box-shadow: 0 8px 28px rgba(124, 107, 201, 0.11);
+  box-shadow: 0 8px 28px rgba(91, 75, 196, 0.11);
   border-color: var(--accent-mid);
 }
 
@@ -792,7 +794,7 @@ h2::after {
 }
 
 .proj-art-card:hover {
-  box-shadow: 0 8px 28px rgba(124, 107, 201, 0.11);
+  box-shadow: 0 8px 28px rgba(91, 75, 196, 0.11);
   border-color: var(--accent-mid);
 }
 
@@ -867,7 +869,7 @@ h2::after {
 
 .exp-entry:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(124, 107, 201, 0.12);
+  box-shadow: 0 10px 28px rgba(91, 75, 196, 0.12);
   border-color: var(--accent-mid);
 }
 
