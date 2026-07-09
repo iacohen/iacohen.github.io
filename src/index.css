@@ -8,7 +8,8 @@
 :root {
   --bg:           #fafaf8;
   --text:         #1a1a1a;
-  --muted:        #6b6b6b;
+  --heading:      #1a1a1a;
+  --muted:        #565656;
   --accent:       #7c6bc9;
   --accent-light: #ede9f7;
   --accent-mid:   #c4b8e8;
@@ -212,7 +213,7 @@ nav a:hover {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--heading);
   margin-bottom: 0.9rem;
   padding-bottom: 0.55rem;
   border-bottom: 2px solid var(--accent);
@@ -270,7 +271,7 @@ h2 {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--heading);
   margin-bottom: 2.5rem;
 }
 
