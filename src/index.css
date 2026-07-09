@@ -16,6 +16,7 @@
   --accent-light: #ede9f7;
   --accent-mid:   #c4b8e8;
   --border:       #e0e0dc;
+  --band-bg:      #f2f0f7;
   --max-width:    680px;
   --font:         'Georgia', serif;
 }
@@ -253,10 +254,15 @@ nav a:hover {
 }
 
 /* ── Home nav cards ── */
+.cards-band {
+  background: var(--band-bg);
+  border-top: 1px solid var(--border);
+}
+
 .home-sections {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 3rem 1.5rem 6rem;
+  padding: 4rem 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;

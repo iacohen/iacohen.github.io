@@ -109,18 +109,20 @@ export default function Home() {
         </section>
       </main>
 
-      <div id="sections" className="home-sections">
-        {cards.map((card, i) => (
-          <FadeIn key={card.to} delay={0.1 * i}>
-            <Link to={card.to} className="section-card">
-              <card.icon className="section-card-icon" aria-hidden="true" />
-              <span className="section-card-title">{card.title}</span>
-              <p className="section-card-desc">{card.desc}</p>
-              <span className="section-card-arrow">→</span>
-            </Link>
-          </FadeIn>
-        ))}
-      </div>
+      <section id="sections" className="cards-band">
+        <div className="home-sections">
+          {cards.map((card, i) => (
+            <FadeIn key={card.to} delay={0.1 * i}>
+              <Link to={card.to} className="section-card">
+                <card.icon className="section-card-icon" aria-hidden="true" />
+                <span className="section-card-title">{card.title}</span>
+                <p className="section-card-desc">{card.desc}</p>
+                <span className="section-card-arrow">→</span>
+              </Link>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
     </>
   )
 }
