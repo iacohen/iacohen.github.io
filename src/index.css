@@ -18,6 +18,7 @@
   --border:       #e0e0dc;
   --band-bg:      #f2f0f7;
   --max-width:    680px;
+  --nav-height:   64px;
   /* --font-serif: display headings only. --font-sans: body copy and UI. */
   --font-serif:   'Georgia', serif;
   --font-sans:    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -39,6 +40,7 @@ body {
 header {
   position: sticky;
   top: 0;
+  height: var(--nav-height);
   background: rgba(250, 250, 248, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -48,8 +50,9 @@ header {
 
 nav {
   max-width: 800px;
+  height: 100%;
   margin: 0 auto;
-  padding: 0.9rem 1.5rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -86,7 +89,7 @@ nav a:hover {
 /* ── Hero ── */
 #hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--nav-height));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +101,7 @@ nav a:hover {
   );
   background-size: 200% 200%;
   animation: gradient-shift 12s ease infinite;
-  padding: 6rem 2rem;
+  padding: 3rem 2rem;
   overflow: hidden;
 }
 
@@ -106,14 +109,11 @@ nav a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(var(--accent-mid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--accent-mid) 1px, transparent 1px);
-  background-size: 48px 48px;
-  opacity: 0.08;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, black 40%, transparent 90%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, black 40%, transparent 90%);
+  z-index: 0;
   pointer-events: none;
+  background-image: radial-gradient(var(--accent-mid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.05;
 }
 
 @keyframes gradient-shift {
@@ -192,11 +192,14 @@ nav a:hover {
 
 .hero-intro {
   font-family: var(--font-sans);
-  font-size: 1rem;
-  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
   margin-top: 1.5rem;
-  max-width: 30ch;
-  line-height: 1.6;
+  max-width: 34ch;
+  line-height: 1.55;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--accent-mid);
 }
 
 .hero-actions {
@@ -380,14 +383,6 @@ h2::after {
 }
 
 /* ── About ── */
-.tagline {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  color: var(--muted);
-  letter-spacing: 0.02em;
-  margin-bottom: 1.8rem;
-}
-
 #about p + p {
   margin-top: 1rem;
 }
@@ -1112,7 +1107,7 @@ footer {
   .hero-text      { text-align: center; }
   .hero-hi        { font-size: 3.8rem; }
   .hero-name      { font-size: 2.2rem; }
-  .hero-intro     { max-width: none; }
+  .hero-intro     { max-width: none; border-left: none; padding-left: 0; }
   .hero-actions   { justify-content: center; }
   .profile-photo-wrapper { width: 220px; height: 220px; }
 }

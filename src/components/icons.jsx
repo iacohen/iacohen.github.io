@@ -7,11 +7,11 @@ const base = {
   strokeLinejoin: 'round',
 }
 
-export function IconGear(props) {
+export function IconLightbulb(props) {
   return (
     <svg {...base} {...props}>
-      <circle cx="12" cy="12" r="3.2" />
-      <path d="M12 2.8v3M12 18.2v3M21.2 12h-3M5.8 12h-3M18.1 5.9l-2.1 2.1M8 14l-2.1 2.1M18.1 18.1L16 16M8 10 5.9 7.9" />
+      <path d="M12 3a6 6 0 0 0-3.2 11.1c.7.5 1.2 1.3 1.2 2.2v.2h4v-.2c0-.9.5-1.7 1.2-2.2A6 6 0 0 0 12 3z" />
+      <path d="M9.5 19.5h5M10.3 21.5h3.4" />
     </svg>
   )
 }

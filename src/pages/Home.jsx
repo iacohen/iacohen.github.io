@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn'
 import Carousel from '../components/Carousel'
-import { IconGear, IconBriefcase, IconCompass, IconMail } from '../components/icons'
+import { IconLightbulb, IconBriefcase, IconCompass, IconMail } from '../components/icons'
 
 // Add your own photos to public/images (e.g. ABOUT_1.jpg) and list them here.
 const aboutImages = [
@@ -28,7 +28,7 @@ const cards = [
     to: '/projects',
     title: 'Projects',
     desc: 'See what I\'ve been making, for class and for fun.',
-    icon: IconGear,
+    icon: IconLightbulb,
   },
   {
     to: '/experience',
@@ -63,7 +63,7 @@ export default function Home() {
             <p className="hero-name">I'm Ilana.</p>
             <p className="hero-sub">Mechanical Engineering&nbsp;&middot; Illinois&nbsp;&middot; Stanford</p>
             <p className="hero-intro">
-              I design and build mechanical systems, from pneumatic haptics to hands-on fabrication projects.
+              Currently @ Stanford University as a Mechanical Engineering M.S. Candidate
             </p>
             <div className="hero-actions">
               <Link to="/projects" className="btn btn-primary">View Projects</Link>
@@ -83,9 +83,6 @@ export default function Home() {
       <main>
         <section id="about">
           <FadeIn as="h2">About</FadeIn>
-          <FadeIn as="p" className="tagline" delay={0.1}>
-            Currently @ Stanford University as a Mechanical Engineering M.S. Candidate
-          </FadeIn>
           <FadeIn as="p" delay={0.2}>
             Welcome to my corner of the web!
           </FadeIn>
