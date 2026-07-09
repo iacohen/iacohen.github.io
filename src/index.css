@@ -468,10 +468,8 @@ h2::after {
 /* ── World map ── */
 .world-map-wrap {
   position: relative;
-  width: min(1400px, 92vw);
+  width: 100%;
   margin-top: 1rem;
-  margin-left: calc((100% - min(1400px, 92vw)) / 2);
-  margin-right: calc((100% - min(1400px, 92vw)) / 2);
   aspect-ratio: 2 / 1;
   border-radius: 10px;
   overflow: hidden;
@@ -545,6 +543,61 @@ h2::after {
 
 .world-map-credit a {
   color: var(--muted);
+}
+
+.map-sub-label {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-top: 2.5rem;
+  margin-bottom: -0.5rem;
+}
+
+/* ── US states map ── */
+.us-map {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.us-map svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.us-map g.state path {
+  fill: var(--accent-light);
+  stroke: var(--bg);
+  stroke-width: 1;
+}
+
+.us-map g.borders path {
+  fill: none;
+  stroke: var(--bg);
+  stroke-width: 1;
+}
+
+.us-map circle.dccircle {
+  fill: var(--accent-light);
+  stroke: var(--bg);
+}
+
+.us-map path.separator1 {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 2;
+}
+
+.us-map .il, .us-map .ca, .us-map .wa, .us-map .ut, .us-map .in, .us-map .oh,
+.us-map .pa, .us-map .ny, .us-map .fl, .us-map .co, .us-map .nv, .us-map .ak,
+.us-map .mi, .us-map .wi {
+  fill: var(--accent);
 }
 
 .world-map-tooltip {

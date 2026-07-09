@@ -1,5 +1,6 @@
 import FadeIn from '../components/FadeIn'
 import WorldMap from '../components/WorldMap'
+import USMap from '../components/USMap'
 
 const hobbies = [
   {
@@ -44,6 +45,13 @@ export default function Hobbies() {
         </FadeIn>
         <FadeIn delay={0.15 * (hobbies.length + 1) + 0.1}>
           <WorldMap />
+        </FadeIn>
+
+        <FadeIn as="p" className="map-sub-label" delay={0.15 * (hobbies.length + 1) + 0.15}>
+          States I've visited
+        </FadeIn>
+        <FadeIn delay={0.15 * (hobbies.length + 1) + 0.2}>
+          <USMap />
         </FadeIn>
       </section>
     </main>
