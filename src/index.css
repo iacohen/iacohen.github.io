@@ -82,9 +82,9 @@ nav a:hover {
 
 /* ── Hero ── */
 #hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: linear-gradient(
@@ -95,7 +95,8 @@ nav a:hover {
   );
   background-size: 200% 200%;
   animation: gradient-shift 12s ease infinite;
-  padding: 2rem 2rem 4rem;
+  padding: 6rem 2rem;
+  overflow: hidden;
 }
 
 @keyframes gradient-shift {
@@ -170,11 +171,65 @@ nav a:hover {
   text-transform: uppercase;
 }
 
+.hero-intro {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: var(--muted);
+  margin-top: 1.5rem;
+  max-width: 30ch;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.8rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 99px;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(91, 75, 196, 0.25);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent-mid);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
 .scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
   background: none;
   border: none;
   cursor: pointer;
-  margin-top: 3.5rem;
   font-size: 1.3rem;
   color: var(--accent-mid);
   animation: bounce 2s ease-in-out infinite;
@@ -243,8 +298,8 @@ nav a:hover {
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(10px); }
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(10px); }
 }
 
 /* ── Main layout ── */
@@ -1019,6 +1074,8 @@ footer {
   .hero-text      { text-align: center; }
   .hero-hi        { font-size: 3.8rem; }
   .hero-name      { font-size: 2.2rem; }
+  .hero-intro     { max-width: none; }
+  .hero-actions   { justify-content: center; }
   .profile-photo-wrapper { width: 220px; height: 220px; }
 }
 

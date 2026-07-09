@@ -4,16 +4,29 @@ import Carousel from '../components/Carousel'
 
 // Add your own photos to public/images (e.g. ABOUT_1.jpg) and list them here.
 const aboutImages = [
-  '/images/ABOUT_1.jpg',
-  '/images/ABOUT_2.jpg',
-  '/images/ABOUT_3.jpg',
+  { src: '/images/ABOUT_grad1.jpg', caption: 'Stanford graduation, June 2026. Photo: Jason L. Cui' },
+  { src: '/images/ABOUT_zion.jpg', caption: 'Angel\'s Landing, Zion National Park.' },
+  { src: '/images/ABOUT_postcards.jpg', caption: 'Some of my postcard collection in June 2025.' },
+  { src: '/images/ABOUT_ballet.jpg', caption: 'The dancing days.' },
+  { src: '/images/ABOUT_choir.jpg', caption: 'Post choir performance in Memorial Church, Stanford.' },
+  { src: '/images/ABOUT_welding.png', caption: 'TIG Welding.' },
+  { src: '/images/ABOUT_tree.jpg', caption: 'Tree hugger; Ilana means tree.' },
+  { src: '/images/ABOUT_yosemite.JPG', caption: 'Yosemite, my favorite National Park so far.' },
+  { src: '/images/ABOUT_teo.jpg', caption: 'Pyramid of Quetzalcoatl, Teotihuacan, MX.' },
+  { src: '/images/ABOUT_larkin.JPG', caption: 'End-of-year dorm superlatives and "scarfing" as a freshman RA.' },
+  { src: '/images/ABOUT_goldengate.jpg', caption: 'Walking accross the Golden Gate in typical SF weather.' },
+  { src: '/images/ABOUT_HMBsunset.JPG', caption: 'Chasing sunsets at Half Moon Bay.' },
+  { src: '/images/ABOUT_nomeSunset.JPG', caption: 'Chasing sunsets in Nome, Alaska. Photo: Jason L. Cui' },
+  { src: '/images/ABOUT_nomeDog.jpg', caption: 'Big dog love.' },
+  { src: '/images/ABOUT_penguin.JPG', caption: 'The penguin obsession started even younger.' },
+  { src: '/images/ABOUT_sunrise.jpg', caption: 'I love a sunrise hike... when I can get up for it.' },
 ]
 
 const cards = [
   {
     to: '/projects',
     title: 'Projects',
-    desc: 'See what Ive been making, for class and for fun.',
+    desc: 'See what I\'ve been making, for class and for fun.',
   },
   {
     to: '/experience',
@@ -23,12 +36,12 @@ const cards = [
   {
     to: '/hobbies',
     title: 'Hobbies',
-    desc: 'Hiking, cooking, and the ideas that live outside the lab.',
+    desc: 'Random things, when there\'s the time for freetime.',
   },
   {
     to: '/contact',
     title: 'Contact',
-    desc: 'Get in touch! Reach out anytime; Id love to chat.',
+    desc: 'Get in touch! Reach out anytime; I\'d love to chat.',
   },
 ]
 
@@ -44,6 +57,13 @@ export default function Home() {
             <h1 className="hero-hi">Hi!</h1>
             <p className="hero-name">I'm Ilana.</p>
             <p className="hero-sub">Mechanical Engineering&nbsp;&middot; Illinois&nbsp;&middot; Stanford</p>
+            <p className="hero-intro">
+              I design and build mechanical systems, from pneumatic haptics to hands-on fabrication projects.
+            </p>
+            <div className="hero-actions">
+              <Link to="/projects" className="btn btn-primary">View Projects</Link>
+              <Link to="/contact" className="btn btn-secondary">Get in touch</Link>
+            </div>
           </div>
         </div>
         <button
@@ -73,7 +93,7 @@ export default function Home() {
             interaction in the first place: I love thinking about how physical sensation shapes the way we understand the world.
           </FadeIn>
           <FadeIn as="p" delay={0.3}>
-            When I'm not studying or working, you can probably find me dancing, listening to music, out on a hike, or exploring a new place. I like making things with my hands,
+            When I'm not studying or working, you can probably find me dancing, listening to music, out on a hike, chasing a sunset, or exploring a new place. I like making things with my hands,
             and I proudly call myself a penguin enthusiast. I also paint, edit videos, and occasionally try to run, all while working toward visiting as
             many national parks as I can. Music is a constant for me, whether I'm jamming with my headphones on, playing piano, teaching myself guitar, or singing in choir. Outside of that,
             I collect sea glass from beaches, and every trip I take adds a postcard or two to a growing collection from everywhere I've been.
