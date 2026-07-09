@@ -20,13 +20,7 @@ export default function WorldMap() {
             style={{ top: `${p.top}%`, left: `${p.left}%` }}
             aria-label={p.label}
           >
-            {p.home ? (
-              <svg viewBox="0 0 24 24" className="world-map-home-icon" aria-hidden="true">
-                <path d="M12 3 2 12h3v8h6v-5h2v5h6v-8h3z" />
-              </svg>
-            ) : (
-              <span className="world-map-dot" />
-            )}
+            <span className="world-map-dot" />
             <span className="world-map-tooltip" aria-hidden="true">{p.label}</span>
           </button>
         ))}

@@ -677,18 +677,6 @@ h2::after {
   transform: scale(1.5);
 }
 
-.world-map-home-icon {
-  width: 16px;
-  height: 16px;
-  fill: var(--accent);
-  transition: transform 0.15s ease;
-}
-
-.world-map-pin:hover .world-map-home-icon,
-.world-map-pin:focus-visible .world-map-home-icon {
-  transform: scale(1.25);
-}
-
 .world-map-credit {
   font-family: var(--font-sans);
   font-size: 0.7rem;
@@ -732,9 +720,7 @@ h2::after {
   fill: var(--map-land);
   stroke: var(--bg);
   stroke-width: 1;
-  transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 0.15s ease, filter 0.15s ease;
+  transition: fill 0.15s ease, stroke 0.15s ease, stroke-width 0.15s ease, filter 0.15s ease;
 }
 
 .us-map g.state path.il, .us-map g.state path.ca, .us-map g.state path.wa, .us-map g.state path.ut,
@@ -748,8 +734,10 @@ h2::after {
 .us-map g.state path.in:hover, .us-map g.state path.oh:hover, .us-map g.state path.pa:hover, .us-map g.state path.ny:hover,
 .us-map g.state path.fl:hover, .us-map g.state path.co:hover, .us-map g.state path.nv:hover, .us-map g.state path.ak:hover,
 .us-map g.state path.mi:hover, .us-map g.state path.wi:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 3px 6px rgba(26, 26, 26, 0.3));
+  fill: var(--accent);
+  stroke: var(--bg);
+  stroke-width: 2;
+  filter: drop-shadow(0 2px 5px rgba(26, 26, 26, 0.35));
 }
 
 .us-map-tooltip {

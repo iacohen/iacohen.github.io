@@ -128,6 +128,12 @@ const leadership = [
   },
 ]
 
+// Delays run cumulatively across the whole page instead of restarting
+// per block, so a later block never fades in "ahead of" an earlier one
+// when both are visible in the viewport at the same time.
+const workDelayOffset = education.length
+const leadershipDelayOffset = education.length + work.length
+
 export default function Experience() {
   return (
     <main>
@@ -162,7 +168,7 @@ export default function Experience() {
           <FadeIn><p className="exp-block-label">Work Experience</p></FadeIn>
           <div className="exp-group">
             {work.map((e, i) => (
-              <FadeIn key={e.org + e.dates} delay={0.1 * (i + 1)}>
+              <FadeIn key={e.org + e.dates} delay={0.1 * (workDelayOffset + i + 1)}>
                 <div className="exp-entry">
                   <div className="exp-header">
                     <h3 className="exp-org">{e.org}</h3>
@@ -185,7 +191,7 @@ export default function Experience() {
           <FadeIn><p className="exp-block-label">Leadership</p></FadeIn>
           <div className="exp-group">
             {leadership.map((e, i) => (
-              <FadeIn key={e.org} delay={0.1 * (i + 1)}>
+              <FadeIn key={e.org} delay={0.1 * (leadershipDelayOffset + i + 1)}>
                 <div className="exp-entry">
                   <div className="exp-header">
                     <h3 className="exp-org">{e.org}</h3>
