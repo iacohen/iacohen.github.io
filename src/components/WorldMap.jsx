@@ -1,10 +1,10 @@
-// top/left are computed from each place's real geographic center
+// top/left are computed from each country's geographic centroid
 // (equirectangular projection, full -180..180 / -90..90).
 const places = [
-  { label: 'United States', top: 27.78, left: 25.22, home: true },
-  { label: 'Mexico', top: 39.2, left: 22.46 },
-  { label: 'Panama', top: 45.01, left: 27.91 },
-  { label: 'Brazil', top: 63.08, left: 37.05 },
+  { label: 'United States', top: 27.87, left: 22.68, home: true },
+  { label: 'Mexico', top: 36.72, left: 21.51 },
+  { label: 'Panama', top: 45.28, left: 27.78 },
+  { label: 'Brazil', top: 56.02, left: 35.26 },
 ]
 
 export default function WorldMap() {

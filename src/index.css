@@ -17,6 +17,7 @@
   --accent-mid:   #c4b8e8;
   --border:       #e0e0dc;
   --band-bg:      #f2f0f7;
+  --map-land:     #d8d8d2;
   --max-width:    680px;
   --nav-height:   64px;
   /* --font-serif: display headings only. --font-sans: body copy and UI. */
@@ -82,6 +83,71 @@ nav a {
   transition: color 0.15s;
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 15px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--text);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+@media (max-width: 700px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 1.5rem 1rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0.75rem 0;
+  }
+}
+
 nav a:hover {
   color: var(--accent);
 }
@@ -113,7 +179,7 @@ nav a:hover {
   pointer-events: none;
   background-image: radial-gradient(var(--accent-mid) 1px, transparent 1px);
   background-size: 24px 24px;
-  opacity: 0.05;
+  opacity: 0.09;
 }
 
 @keyframes gradient-shift {
@@ -635,18 +701,19 @@ h2::after {
   color: var(--muted);
 }
 
-.map-sub-label {
+.map-sub-heading {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--heading);
+  text-align: center;
   margin-top: 2.5rem;
   margin-bottom: -0.5rem;
 }
 
 /* ── US states map ── */
 .us-map {
+  position: relative;
   width: 100%;
   margin-top: 2rem;
   border-radius: 10px;
@@ -662,9 +729,55 @@ h2::after {
 }
 
 .us-map g.state path {
-  fill: var(--accent-light);
+  fill: var(--map-land);
   stroke: var(--bg);
   stroke-width: 1;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.us-map g.state path.il, .us-map g.state path.ca, .us-map g.state path.wa, .us-map g.state path.ut,
+.us-map g.state path.in, .us-map g.state path.oh, .us-map g.state path.pa, .us-map g.state path.ny,
+.us-map g.state path.fl, .us-map g.state path.co, .us-map g.state path.nv, .us-map g.state path.ak,
+.us-map g.state path.mi, .us-map g.state path.wi {
+  cursor: pointer;
+}
+
+.us-map g.state path.il:hover, .us-map g.state path.ca:hover, .us-map g.state path.wa:hover, .us-map g.state path.ut:hover,
+.us-map g.state path.in:hover, .us-map g.state path.oh:hover, .us-map g.state path.pa:hover, .us-map g.state path.ny:hover,
+.us-map g.state path.fl:hover, .us-map g.state path.co:hover, .us-map g.state path.nv:hover, .us-map g.state path.ak:hover,
+.us-map g.state path.mi:hover, .us-map g.state path.wi:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 3px 6px rgba(26, 26, 26, 0.3));
+}
+
+.us-map-tooltip {
+  position: absolute;
+  transform: translate(-50%, -130%);
+  background: #2c2a30;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  white-space: nowrap;
+  padding: 0.3rem 0.55rem;
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.us-map-home-pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.us-map-home-pin .us-map-home-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+  filter: drop-shadow(0 1px 2px rgba(26, 26, 26, 0.25));
 }
 
 .us-map g.borders path {
@@ -684,10 +797,11 @@ h2::after {
   stroke-width: 2;
 }
 
-.us-map .il, .us-map .ca, .us-map .wa, .us-map .ut, .us-map .in, .us-map .oh,
-.us-map .pa, .us-map .ny, .us-map .fl, .us-map .co, .us-map .nv, .us-map .ak,
-.us-map .mi, .us-map .wi {
-  fill: var(--accent);
+.us-map g.state path.il, .us-map g.state path.ca, .us-map g.state path.wa, .us-map g.state path.ut,
+.us-map g.state path.in, .us-map g.state path.oh, .us-map g.state path.pa, .us-map g.state path.ny,
+.us-map g.state path.fl, .us-map g.state path.co, .us-map g.state path.nv, .us-map g.state path.ak,
+.us-map g.state path.mi, .us-map g.state path.wi {
+  fill: var(--accent-mid);
 }
 
 .world-map-tooltip {

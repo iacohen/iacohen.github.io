@@ -37,7 +37,7 @@ export default function Hobbies() {
           </FadeIn>
         ))}
 
-        <FadeIn as="h2" delay={0.15 * (hobbies.length + 1)} style={{ marginTop: '3rem' }}>
+        <FadeIn as="p" className="proj-section-label" delay={0.15 * (hobbies.length + 1)} style={{ marginTop: '3rem' }}>
           Places I've Been
         </FadeIn>
         <FadeIn as="p" delay={0.15 * (hobbies.length + 1) + 0.05}>
@@ -47,8 +47,8 @@ export default function Hobbies() {
           <WorldMap />
         </FadeIn>
 
-        <FadeIn as="p" className="map-sub-label" delay={0.15 * (hobbies.length + 1) + 0.15}>
-          States I've visited
+        <FadeIn as="h3" className="map-sub-heading" delay={0.15 * (hobbies.length + 1) + 0.15}>
+          United States
         </FadeIn>
         <FadeIn delay={0.15 * (hobbies.length + 1) + 0.2}>
           <USMap />
