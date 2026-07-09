@@ -18,7 +18,9 @@
   --border:       #e0e0dc;
   --band-bg:      #f2f0f7;
   --max-width:    680px;
-  --font:         'Georgia', serif;
+  /* --font-serif: display headings only. --font-sans: body copy and UI. */
+  --font-serif:   'Georgia', serif;
+  --font-sans:    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -28,7 +30,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font);
+  font-family: var(--font-sans);
   font-size: 1.05rem;
   line-height: 1.75;
 }
@@ -54,7 +56,7 @@ nav {
 }
 
 .nav-name {
-  font-family: var(--font);
+  font-family: var(--font-serif);
   font-size: 0.95rem;
   letter-spacing: 0.03em;
   color: var(--muted);
@@ -69,7 +71,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.875rem;
   letter-spacing: 0.04em;
   color: var(--muted);
@@ -166,7 +168,7 @@ nav a:hover {
 .hero-hi {
   font-size: 5rem;
   font-weight: normal;
-  font-family: var(--font);
+  font-family: var(--font-serif);
   color: var(--text);
   line-height: 1;
   letter-spacing: -0.02em;
@@ -174,13 +176,13 @@ nav a:hover {
 
 .hero-name {
   font-size: 3.2rem;
-  font-family: var(--font);
+  font-family: var(--font-serif);
   color: var(--accent);
   margin-top: 0.4rem;
 }
 
 .hero-sub {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.9rem;
   color: var(--muted);
   margin-top: 1.1rem;
@@ -189,7 +191,7 @@ nav a:hover {
 }
 
 .hero-intro {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 1rem;
   color: var(--muted);
   margin-top: 1.5rem;
@@ -206,7 +208,7 @@ nav a:hover {
 
 .btn {
   display: inline-block;
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -301,7 +303,7 @@ nav a:hover {
 
 .section-card-title {
   display: block;
-  font-family: sans-serif;
+  font-family: var(--font-serif);
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -314,7 +316,7 @@ nav a:hover {
 }
 
 .section-card-desc {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.65;
@@ -360,7 +362,7 @@ section + section {
 /* ── Section headings ── */
 h2 {
   font-size: 1.05rem;
-  font-family: sans-serif;
+  font-family: var(--font-serif);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -379,7 +381,7 @@ h2::after {
 
 /* ── About ── */
 .tagline {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.9rem;
   color: var(--muted);
   letter-spacing: 0.02em;
@@ -422,7 +424,7 @@ h2::after {
 }
 
 .project-meta {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.8rem;
   color: var(--muted);
   letter-spacing: 0.02em;
@@ -437,7 +439,7 @@ h2::after {
 }
 
 .tag {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.74rem;
   padding: 0.18rem 0.65rem;
   background: var(--accent-light);
@@ -480,7 +482,7 @@ h2::after {
   padding: 1.4rem 0.9rem 0.6rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
   color: #fff;
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.8rem;
   text-align: left;
   transform: translateY(100%);
@@ -627,7 +629,7 @@ h2::after {
 }
 
 .world-map-credit {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.7rem;
   color: var(--muted);
   text-align: right;
@@ -639,7 +641,7 @@ h2::after {
 }
 
 .map-sub-label {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -700,7 +702,7 @@ h2::after {
   transform: translate(-50%, -6px);
   background: #2c2a30;
   color: #fff;
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.72rem;
   white-space: nowrap;
   padding: 0.3rem 0.55rem;
@@ -770,7 +772,7 @@ h2::after {
 
 .lightbox-caption {
   color: #f0f0f0;
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.9rem;
   text-align: center;
   margin-top: 1rem;
@@ -854,12 +856,12 @@ h2::after {
 .proj-title {
   font-size: 1.1rem;
   font-weight: normal;
-  font-family: var(--font);
+  font-family: var(--font-serif);
   margin-bottom: 0.2rem;
 }
 
 .proj-desc {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.75;
@@ -868,7 +870,7 @@ h2::after {
 }
 
 .proj-section-label {
-  font-family: sans-serif;
+  font-family: var(--font-serif);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -905,7 +907,7 @@ h2::after {
 }
 
 .exp-block-label {
-  font-family: sans-serif;
+  font-family: var(--font-serif);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -982,12 +984,12 @@ h2::after {
 .exp-org {
   font-size: 1rem;
   font-weight: normal;
-  font-family: var(--font);
+  font-family: var(--font-serif);
   color: var(--text);
 }
 
 .exp-location-date {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.78rem;
   color: var(--muted);
   letter-spacing: 0.02em;
@@ -995,7 +997,7 @@ h2::after {
 }
 
 .exp-role {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.85rem;
   color: var(--accent);
   font-style: italic;
@@ -1003,7 +1005,7 @@ h2::after {
 }
 
 .exp-degree {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.88rem;
   color: var(--muted);
   margin-bottom: 0.5rem;
@@ -1012,7 +1014,7 @@ h2::after {
 .exp-bullets {
   margin: 0;
   padding-left: 1.2rem;
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.7;
@@ -1029,7 +1031,7 @@ h2::after {
 }
 
 .exp-notes li {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.85rem;
   color: var(--muted);
   font-style: italic;
@@ -1048,7 +1050,7 @@ h2::after {
 
 .contact-list {
   list-style: none;
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.95rem;
   display: flex;
   flex-direction: column;
@@ -1069,7 +1071,7 @@ footer {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 3rem 1.5rem 2rem;
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.8rem;
   color: var(--muted);
 }
