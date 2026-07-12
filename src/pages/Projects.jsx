@@ -30,6 +30,63 @@ const projects = [
     tags: ['CAD', '3D Printing', 'User Testing', 'Medical Device Design'],
   },
   {
+    title: 'Glowing Up',
+    meta: '2026',
+    description:
+      'Designed and fabricated a rotating, customizable lithophane lamp displaying childhood photos that glow when lit from within. Combined two AM-specific techniques: a print-in-place plain bearing that produces the lazy-Susan rotation in a single print, and mid-print magnet inserts that let each lithophane panel snap on and off. Tuned bearing clearance (0.3 mm radial) and lithophane settings (0.1 mm layers) through targeted prototypes, then paired the printed PLA frames with a laser-cut wooden lid for material contrast.',
+    images: [
+      '/images/PROJECT_litho1.png',
+      '/images/PROJECT_litho2.png',
+      '/images/PROJECT_litho3.png',
+      '/images/PROJECT_litho4.png',
+      '/images/PROJECT_litho5.png',
+      '/images/PROJECT_litho6.png',
+      '/images/PROJECT_litho7.png',
+    ],
+    tags: ['Print-in-Place', '3D Printing', 'Lithophanes', 'Mid-Print Insert'],
+  },
+  {
+    title: 'Dorm Buddy: Suction-Mounted Key Clip',
+    meta: '2026',
+    description:
+      'Designed a suction-cup-mounted, spring-driven key clip for non-destructive storage on mirrors and smooth surfaces. Engineered a flexible resin suction cup (Elastic 50A) sized from a suction-force analysis to hold a ~2 N load, finding that surface finish and post-processing mattered as much as geometry. Paired it with a PLA print-in-place hinge clip and commercial compression spring, then used Fusion generative design to optimize the load-bearing clip body against expected and accidental-misuse loads.',
+    images: [
+      '/images/PROJECT_clip1.png',
+      '/images/PROJECT_clip2.png',
+      '/images/PROJECT_clip3.png',
+      '/images/PROJECT_clip4.png',
+      '/images/PROJECT_clip5.png',
+      '/images/PROJECT_clip6.png',
+      '/images/PROJECT_clip7.png',
+    ],
+    tags: ['Generative Design', 'Resin Printing', 'Compliant Mechanisms', 'CAD'],
+  },
+    {
+    title: 'Trum-Pal',
+    meta: '2026',
+    description:
+      'Built a haptic trumpet trainer on a four-person team that teaches fingering and timing through a Guitar Hero–style Unity game paired with a 3D-printed trumpet that provides live force and vibrotactile feedback. Fingertip ERM motors give anticipatory vibration cues while 25 N solenoids deliver force feedback on note release, with time-of-flight sensors (1 mm resolution) feeding a Teensy 4.0 control loop. Characterized the solenoids\' nonlinear force response and added hard stops to keep them linear, then confirmed stability with a state-space eigenvalue analysis. Demoed to 25 users at the ME 327 Open House.',
+    link: 'https://charm.stanford.edu/ME327/2026-Group16',
+    images: [
+      '/images/PROJECT_trumpet1.png',
+      '/images/PROJECT_trumpet2.png',
+      '/images/PROJECT_trumpet3.png',
+    ],
+    tags: ['Haptics', 'Mechatronics', 'Force Feedback', 'Unity / C#'],
+  },
+  {
+    title: 'Stomp Rocket',
+    meta: '2026',
+    description:
+      'Designed a stomp-powered pneumatic launcher on a three-person team, converting a human stomp into thrust to fire a resin-printed rocket. Owned the rocket subsystem, printing it in Formlabs Tough 2000 for impact resistance and sizing it from energy calculations targeting a ~4 m apogee. Each component—a polypropylene accordion pump, a stiff PLA launch platform, and the rocket—was deliberately matched to a distinct AM behavior: compliance, stiffness, or impact absorption. Used FEA to locate stress concentrations and iterate geometry to minimize layer delamination.',
+    images: [
+      '/images/PROJECT_rocket1.png',
+      '/images/PROJECT_rocket2.png',
+      '/images/PROJECT_rocket3.png',
+    ],
+    tags: ['Pneumatics', 'Resin Printing', 'FEA', 'Material Selection'],
+  },
+  {
     title: 'אילן',
     meta: '2025',
     description:
@@ -94,6 +151,11 @@ export default function Projects() {
                   <div className="project-tags">
                     {p.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
                   </div>
+                  {p.link && (
+                    <a href={p.link} target="_blank" rel="noopener noreferrer" className="proj-link">
+                      Learn more →
+                    </a>
+                  )}
                 </div>
               </div>
             </FadeIn>
