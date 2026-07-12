@@ -24,7 +24,7 @@ const work = [
     dates: 'Sep 2026-present',
     bullets: [
       'Part-time CA position at the Stanford machine shop teaching facility.',
-      'Course Assistant in the PRL, managing the shop for maintenence, operating hours, and safety, and serving students in a mentorship and instructive role.',
+      'Course Assistant in the PRL, managing the shop for maintenance, operating hours, and safety, and serving students in a mentorship and instructive role.',
     ],
   },
   {

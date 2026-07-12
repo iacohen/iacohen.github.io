@@ -162,23 +162,25 @@ export default function Projects() {
           ))}
         </div>
 
-        <FadeIn delay={0.1}>
-          <p className="proj-section-label">Painting &amp; Mixed Media</p>
-        </FadeIn>
-        <FadeIn delay={0.2}>
-          <div className="proj-art-card">
-            <div className="proj-art-text">
-              <p className="proj-desc">
-                A collection of mixed-media works, paintings, and digital art spanning years of creative exploration.
-                The centerpiece is a large-scale self-portrait whose face is composed of hundreds of daily photographs
-                transferred onto canvas, with hair built from layered string and T-shirts, paper cranes, and butterfly
-                hair ties as symbolic elements. Other works range from acrylic paintings made as gifts to collages
-                using magazine clippings, shells, and found objects.
-              </p>
+        <div id="painting">
+          <FadeIn delay={0.1}>
+            <p className="proj-section-label">Painting &amp; Mixed Media</p>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <div className="proj-art-card">
+              <div className="proj-art-text">
+                <p className="proj-desc">
+                  A collection of mixed-media works, paintings, and digital art spanning years of creative exploration.
+                  The centerpiece is a large-scale self-portrait whose face is composed of hundreds of daily photographs
+                  transferred onto canvas, with hair built from layered string and T-shirts, paper cranes, and butterfly
+                  hair ties as symbolic elements. Other works range from acrylic paintings made as gifts to collages
+                  using magazine clippings, shells, and found objects.
+                </p>
+              </div>
+              <Carousel images={artImages} alt="Mixed media artwork" className="carousel-art" />
             </div>
-            <Carousel images={artImages} alt="Mixed media artwork" className="carousel-art" />
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
       </section>
     </main>
   )

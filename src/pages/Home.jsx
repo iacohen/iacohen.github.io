@@ -15,7 +15,7 @@ const aboutImages = [
   { src: '/images/ABOUT_yosemite.JPG', caption: 'Yosemite, my favorite National Park so far.' },
   { src: '/images/ABOUT_teo.jpg', caption: 'Pyramid of Quetzalcoatl, Teotihuacan, MX.' },
   { src: '/images/ABOUT_larkin.JPG', caption: 'End-of-year dorm superlatives and "scarfing" as a freshman RA.' },
-  { src: '/images/ABOUT_goldengate.jpg', caption: 'Walking accross the Golden Gate in typical SF weather.' },
+  { src: '/images/ABOUT_goldengate.jpg', caption: 'Walking across the Golden Gate in typical SF weather.' },
   { src: '/images/ABOUT_HMBsunset.JPG', caption: 'Chasing sunsets at Half Moon Bay.' },
   { src: '/images/ABOUT_nomeSunset.JPG', caption: 'Chasing sunsets in Nome, Alaska. Photo: Jason L. Cui' },
   { src: '/images/ABOUT_nomeDog.jpg', caption: 'Big dog love.' },
@@ -63,7 +63,7 @@ export default function Home() {
             <p className="hero-name">I'm Ilana.</p>
             <p className="hero-sub">Mechanical Engineering&nbsp;&middot; Illinois&nbsp;&middot; Stanford</p>
             <p className="hero-intro">
-              Currently @ Stanford University as a Mechanical Engineering M.S. Candidate
+              Currently an MSME Candidate @ Stanford University
             </p>
             <div className="hero-actions">
               <Link to="/projects" className="btn btn-primary">View Projects</Link>
@@ -87,7 +87,7 @@ export default function Home() {
             Welcome to my corner of the web!
           </FadeIn>
           <FadeIn as="p" delay={0.2}>
-            I'm a girl from Champaign, IL studying for my Master's degree at Stanford. I got my B.S. from Stanford in Mechanical Engineering in 2026,
+            I'm a Latina American girl from Champaign, IL studying for my Master's degree at Stanford. I got my B.S. from Stanford in Mechanical Engineering in 2026,
             and am continuing on for my graduate degree. I'm interested in mechanical design, controls, and fluid mechanics, and especially in where they
             intersect. Currently, I serve as a Course Assistant in the Stanford Product Realization Laboratory, and my research has focused on pneumatic haptics,
             controls, and human-robot interaction, specifically designing soft actuator systems that communicate meaningful tactile information to users. My passion

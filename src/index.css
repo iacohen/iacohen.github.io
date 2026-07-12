@@ -525,6 +525,16 @@ h2::after {
   margin-top: 0.7rem;
 }
 
+.hobby-desc a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-mid);
+}
+
+.hobby-desc a:hover {
+  text-decoration-color: var(--accent);
+}
+
 .hobby-parks {
   list-style: disc;
   margin: 0.6rem 0 0 1.1rem;

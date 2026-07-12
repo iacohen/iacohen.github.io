@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      <p>&copy; 2026 Ilana Cohen</p>
+      <p>&copy; 2026 Ilana A. Cohen</p>
     </footer>
   )
 }

@@ -12,7 +12,7 @@ export default function Nav() {
   return (
     <header>
       <nav>
-        <Link to="/" className="nav-name">Ilana Cohen</Link>
+        <Link to="/" className="nav-name">Ilana A. Cohen</Link>
         <button
           type="button"
           className={`nav-toggle${open ? ' open' : ''}`}

@@ -1,14 +1,15 @@
+import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn'
 import WorldMap from '../components/WorldMap'
 import USMap from '../components/USMap'
-import { IconMountain, IconCompass, IconMusicNote, IconWave } from '../components/icons'
+import { IconMountain, IconCompass, IconMusicNote, IconPaintbrush, IconWave } from '../components/icons'
 
 const hobbies = [
   {
     title: 'Walking & hiking',
     icon: IconMountain,
     description:
-      'I love spending time outside! Whether it\'s the familiar flat land and forests I grew up with, or rainforests and mountains of Latin America or California, I\'m always down to explore by foot. I\'m also trying to visit as many U.S. National Parks as I can. So far I\'ve been to:',
+      'I love spending time outside! Whether it\'s the familiar flat land and forests I grew up with, or the rainforests and mountains of Latin America and California, I\'m always down to explore on foot. I\'m also trying to visit as many U.S. National Parks as I can. So far I\'ve been to:',
     parks: ['Arches', 'Bryce Canyon', 'Cuyahoga Valley', 'Yosemite', 'Zion'],
     otherSites: ['Gateway Arch', 'Statue of Liberty'],
   },
@@ -16,13 +17,24 @@ const hobbies = [
     title: 'Getting lost & visiting new places',
     icon: IconCompass,
     description:
-      'Contrary to popular opinion, I love getting lost. It allows you to be fully immersed in the moment and lets you discover places you never thought you would. I love using a compass and a map to figure out where I am and where I\'m going... something that we don\'t have a chance to do a lot these days anymore.',
+      'Contrary to popular opinion, I love getting lost. It lets you be fully immersed in the moment and discover places you never thought you would. I love using a compass and a map to figure out where I am and where I\'m going... something we don\'t often get the chance to do anymore.',
   },
   {
     title: 'Playing music',
     icon: IconMusicNote,
     description:
       'Music has been a constant for as long as I can remember — playing piano, teaching myself guitar, singing with the Stanford Light Opera Company, or just jamming with my headphones on. It\'s the one hobby that\'s followed me through every version of myself so far.',
+  },
+  {
+    title: 'Painting',
+    icon: IconPaintbrush,
+    description: (
+      <>
+        I love painting with acrylics — it's a way to practice concentration, work with my hands, express myself
+        creatively, and make personal gifts for people I care about. You can check out some of my artistic projects{' '}
+        <Link to="/projects#painting">here</Link>.
+      </>
+    ),
   },
   {
     title: 'Collecting sea glass & postcards',
@@ -71,7 +83,7 @@ export default function Hobbies() {
           Places I've Been
         </FadeIn>
         <FadeIn as="p" delay={0.15 * (hobbies.length + 1) + 0.05}>
-          Hover a pin to see where.
+          Hover over a pin to see where.
         </FadeIn>
         <FadeIn delay={0.15 * (hobbies.length + 1) + 0.1}>
           <WorldMap />
