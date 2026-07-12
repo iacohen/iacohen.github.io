@@ -4,7 +4,7 @@ import usMapSvg from '../assets/us-map.svg?raw'
 // Approximate position of Champaign, IL within the map's 959x593 viewBox.
 const HOME_POSITION = { top: '42.2%', left: '63.1%' }
 
-const VISITED = new Set(['il', 'ca', 'wa', 'ut', 'in', 'oh', 'pa', 'ny', 'fl', 'co', 'nv', 'ak', 'mi', 'wi'])
+const VISITED = new Set(['il', 'ca', 'wa', 'ut', 'in', 'oh', 'pa', 'ny', 'fl', 'co', 'nv', 'ak', 'mi', 'wi', 'ky', 'mo'])
 
 export default function USMap() {
   const [tooltip, setTooltip] = useState(null)
@@ -26,7 +26,7 @@ export default function USMap() {
       <div
         className="us-map"
         role="img"
-        aria-label="Map of the United States with Illinois, California, Washington, Utah, Indiana, Ohio, Pennsylvania, New York, Florida, Colorado, Nevada, Alaska, Michigan, and Wisconsin highlighted as visited"
+        aria-label="Map of the United States with Illinois, California, Washington, Utah, Indiana, Ohio, Pennsylvania, New York, Florida, Colorado, Nevada, Alaska, Michigan, Wisconsin, Kentucky, and Missouri highlighted as visited"
         onMouseMove={handleMouseMove}
         onMouseLeave={() => setTooltip(null)}
       >

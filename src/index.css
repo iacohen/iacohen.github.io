@@ -179,7 +179,7 @@ nav a:hover {
   pointer-events: none;
   background-image: radial-gradient(var(--accent-mid) 1px, transparent 1px);
   background-size: 24px 24px;
-  opacity: 0.09;
+  opacity: 0.20;
 }
 
 @keyframes gradient-shift {
@@ -726,14 +726,14 @@ h2::after {
 .us-map g.state path.il, .us-map g.state path.ca, .us-map g.state path.wa, .us-map g.state path.ut,
 .us-map g.state path.in, .us-map g.state path.oh, .us-map g.state path.pa, .us-map g.state path.ny,
 .us-map g.state path.fl, .us-map g.state path.co, .us-map g.state path.nv, .us-map g.state path.ak,
-.us-map g.state path.mi, .us-map g.state path.wi {
+.us-map g.state path.mi, .us-map g.state path.wi, .us-map g.state path.ky, .us-map g.state path.mo {
   cursor: pointer;
 }
 
 .us-map g.state path.il:hover, .us-map g.state path.ca:hover, .us-map g.state path.wa:hover, .us-map g.state path.ut:hover,
 .us-map g.state path.in:hover, .us-map g.state path.oh:hover, .us-map g.state path.pa:hover, .us-map g.state path.ny:hover,
 .us-map g.state path.fl:hover, .us-map g.state path.co:hover, .us-map g.state path.nv:hover, .us-map g.state path.ak:hover,
-.us-map g.state path.mi:hover, .us-map g.state path.wi:hover {
+.us-map g.state path.mi:hover, .us-map g.state path.wi:hover, .us-map g.state path.ky:hover, .us-map g.state path.mo:hover {
   fill: var(--accent);
   stroke: var(--bg);
   stroke-width: 2;
@@ -788,7 +788,7 @@ h2::after {
 .us-map g.state path.il, .us-map g.state path.ca, .us-map g.state path.wa, .us-map g.state path.ut,
 .us-map g.state path.in, .us-map g.state path.oh, .us-map g.state path.pa, .us-map g.state path.ny,
 .us-map g.state path.fl, .us-map g.state path.co, .us-map g.state path.nv, .us-map g.state path.ak,
-.us-map g.state path.mi, .us-map g.state path.wi {
+.us-map g.state path.mi, .us-map g.state path.wi, .us-map g.state path.ky, .us-map g.state path.mo {
   fill: var(--accent-mid);
 }
 
