@@ -43,3 +43,30 @@ export function IconMail(props) {
     </svg>
   )
 }
+
+export function IconMountain(props) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M2.5 19 9 8.5l3 4.5 2.5-3.5L21.5 19z" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+export function IconMusicNote(props) {
+  return (
+    <svg {...base} {...props}>
+      <circle cx="8.5" cy="18" r="2.8" />
+      <circle cx="19" cy="14.5" r="2.8" />
+      <path d="M11.3 18V5.5L21.8 3v11.5" />
+    </svg>
+  )
+}
+
+export function IconWave(props) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M2 9.5c1.8-1.8 3.6-1.8 5.4 0s3.6 1.8 5.4 0 3.6-1.8 5.4 0 3.6 1.8 5.4 0" />
+      <path d="M2 15.5c1.8-1.8 3.6-1.8 5.4 0s3.6 1.8 5.4 0 3.6-1.8 5.4 0 3.6 1.8 5.4 0" />
+    </svg>
+  )
+}

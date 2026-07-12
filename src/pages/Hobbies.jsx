@@ -1,41 +1,71 @@
 import FadeIn from '../components/FadeIn'
 import WorldMap from '../components/WorldMap'
 import USMap from '../components/USMap'
+import { IconMountain, IconCompass, IconMusicNote, IconWave } from '../components/icons'
 
 const hobbies = [
   {
-    title: 'Hiking',
+    title: 'Walking & hiking',
+    icon: IconMountain,
     description:
-      'There\'s something about being above the treeline that resets everything. I try to get into the mountains whenever I can — day hikes, longer trips, anything that involves a lot of vertical gain and a good view at the top.',
+      'I love spending time outside! Whether it\'s the familiar flat land and forests I grew up with, or rainforests and mountains of Latin America or California, I\'m always down to explore by foot. I\'m also trying to visit as many U.S. National Parks as I can. So far I\'ve been to:',
+    parks: ['Arches', 'Bryce Canyon', 'Cuyahoga Valley', 'Yosemite', 'Zion'],
+    otherSites: ['Gateway Arch', 'Statue of Liberty'],
   },
   {
-    title: 'Cooking',
+    title: 'Getting lost & visiting new places',
+    icon: IconCompass,
     description:
-      'Cooking is one of the few places where I get to experiment without worrying about statistical significance. I\'m especially into baking bread and finding excuses to use too much garlic.',
+      'Contrary to popular opinion, I love getting lost. It allows you to be fully immersed in the moment and lets you discover places you never thought you would. I love using a compass and a map to figure out where I am and where I\'m going... something that we don\'t have a chance to do a lot these days anymore.',
   },
   {
-    title: 'Physical sensation & perception',
+    title: 'Playing music',
+    icon: IconMusicNote,
     description:
-      'The question of how we make sense of the physical world through touch, pressure, and proprioception follows me outside the lab. I\'m endlessly interested in the gap between what we measure and what we actually feel.',
+      'Music has been a constant for as long as I can remember — playing piano, teaching myself guitar, singing with the Stanford Light Opera Company, or just jamming with my headphones on. It\'s the one hobby that\'s followed me through every version of myself so far.',
+  },
+  {
+    title: 'Collecting sea glass & postcards',
+    icon: IconWave,
+    description:
+      'Every beach walk turns into a hunt for sea glass, and every trip adds a postcard or two to a growing collection from everywhere I\'ve been. Most of my favorite memories start the same way: watching the sunset over the water, from Half Moon Bay to Nome, Alaska, and wanting to hold onto a small piece of wherever I am.',
   },
 ]
 
 export default function Hobbies() {
   return (
-    <main>
+    <main className="main-wide">
       <section id="hobbies">
         <FadeIn as="h2">Hobbies</FadeIn>
         <FadeIn as="p" delay={0.1}>
-          The things I do when I'm not in the lab.
+          The things I do for fun's sake.
         </FadeIn>
-        {hobbies.map((h, i) => (
-          <FadeIn key={h.title} delay={0.15 * (i + 1)}>
-            <article className="project">
-              <h3>{h.title}</h3>
-              <p>{h.description}</p>
-            </article>
-          </FadeIn>
-        ))}
+        <div className="hobby-list">
+          {hobbies.map((h, i) => (
+            <FadeIn key={h.title} delay={0.15 * (i + 1)}>
+              <div className="hobby-row">
+                <h3 className="hobby-heading">{h.title}</h3>
+                <h.icon className="hobby-icon" aria-hidden="true" />
+                <div>
+                  <p className="hobby-desc">{h.description}</p>
+                  {h.parks && (
+                    <ul className="hobby-parks">
+                      {h.parks.map(park => <li key={park}>{park}</li>)}
+                    </ul>
+                  )}
+                  {h.otherSites && (
+                    <>
+                      <p className="hobby-desc hobby-also">As well as:</p>
+                      <ul className="hobby-parks">
+                        {h.otherSites.map(site => <li key={site}>{site}</li>)}
+                      </ul>
+                    </>
+                  )}
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
 
         <FadeIn as="p" className="proj-section-label" delay={0.15 * (hobbies.length + 1)} style={{ marginTop: '3rem' }}>
           Places I've Been
